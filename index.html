@@ -18,11 +18,11 @@
       var data = new google.visualization.arrayToDataTable(arrayData);
       // this view can select a subset of the data at a time
       var view = new google.visualization.DataView(data);
-      view.setColumns([0,1]);
+      view.setColumns([5,2]);
       var options = {
          title: "Which States are Using Solar Power?",
-         hAxis: {title: data.getColumnLabel(5), minValue: data.getColumnRange(0).min, maxValue: data.getColumnRange(0).max},
-         vAxis: {title: data.getColumnLabel(2), minValue: data.getColumnRange(1).min, maxValue: data.getColumnRange(1).max},
+         hAxis: {title: data.getColumnLabel(5), minValue: data.getColumnRange(5).min, maxValue: data.getColumnRange(5).max},
+         vAxis: {title: data.getColumnLabel(2), minValue: data.getColumnRange(2).min, maxValue: data.getColumnRange(2).max},
          legend: 'none'
       };
       var chart = new google.visualization.ScatterChart(document.getElementById('chart'));
