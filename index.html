@@ -20,7 +20,7 @@
       var view = new google.visualization.DataView(data);
       view.setColumns([5,2]);
       var options = {
-         title: "Which States are Using Solar Power?",
+         title: "Comparing the usable number of days of sunlight to actual solar consumption per capita",
          hAxis: {title: data.getColumnLabel(5), minValue: data.getColumnRange(5).min, maxValue: data.getColumnRange(5).max},
          vAxis: {title: data.getColumnLabel(2), minValue: data.getColumnRange(2).min, maxValue: data.getColumnRange(2).max},
          legend: 'none'
@@ -45,8 +45,6 @@
    <div id="main">
       <h1 class="big">Which States are Using Solar Power?</h1>   
       
-      //<div>http://allybean.github.io/data-journalism/  
-      //</div>   
    <div id="chart">
     </div>
     <p>Here's a scatter plot of the number of clear days each US state gets in a year, plotted against the amount of solar energy consumer per capita. </p>
