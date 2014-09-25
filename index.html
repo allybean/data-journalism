@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-   <title>Which States are Using Solar Energy?</title>
+   <title>Why Don't States Use More Solar Energy?</title>
    <link href='http://fonts.googleapis.com/css?family=Arimo' rel='stylesheet' type='text/css'>
    <script src="https://www.google.com/jsapi"></script>
    <script src="http://code.jquery.com/jquery-1.10.1.min.js"></script>
@@ -21,7 +21,7 @@
       var view = new google.visualization.DataView(data);
       view.setColumns([5,2]);
       var options = {
-         title: "Comparing The Usable Number Of Days Of Sunlight To Actual Solar Consumption Per Capita in 2012",
+         title: "Why Don't States Use More Solar Energy?",
          hAxis: {title: data.getColumnLabel(5), minValue: data.getColumnRange(5).min, maxValue: data.getColumnRange(5).max},
          vAxis: {title: data.getColumnLabel(2), minValue: data.getColumnRange(2).min, maxValue: data.getColumnRange(2).max},
          legend: 'none'
