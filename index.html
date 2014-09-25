@@ -11,7 +11,7 @@
    google.setOnLoadCallback(drawChart);
    function drawChart() {
       // grab the CSV
-      $.get("kzn1993.csv", function(csvString) {
+      $.get("solardata.csv", function(csvString) {
       // transform the CSV string into a 2-dimensional array
       var arrayData = $.csv.toArrays(csvString, {onParseValue: $.csv.hooks.castToScalar});
       // this new DataTable object holds all the data
@@ -20,9 +20,9 @@
       var view = new google.visualization.DataView(data);
       view.setColumns([0,1]);
       var options = {
-         title: "KwaZulu-Natal Household Survey (1993)",
-         hAxis: {title: data.getColumnLabel(0), minValue: data.getColumnRange(0).min, maxValue: data.getColumnRange(0).max},
-         vAxis: {title: data.getColumnLabel(1), minValue: data.getColumnRange(1).min, maxValue: data.getColumnRange(1).max},
+         title: "Which States are Using Solar Power?",
+         hAxis: {title: data.getColumnLabel(5), minValue: data.getColumnRange(0).min, maxValue: data.getColumnRange(0).max},
+         vAxis: {title: data.getColumnLabel(2), minValue: data.getColumnRange(1).min, maxValue: data.getColumnRange(1).max},
          legend: 'none'
       };
       var chart = new google.visualization.ScatterChart(document.getElementById('chart'));
@@ -34,7 +34,7 @@
       // wait till the DOM is loaded
       $(function() {
          // grab the CSV
-         $.get("kzn1993.csv", function(csvString) {
+         $.get("solardata.csv", function(csvString) {
             // display the contents of the CSV
             //$("#chart").html(csvString);
          });
