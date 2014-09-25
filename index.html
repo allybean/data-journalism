@@ -17,7 +17,7 @@
             google.setOnLoadCallback(drawChart);
          });
       });
-      function drawChart() {
+      $(function drawChart() {
          // grab the CSV
          $.get("kzn1993.csv", function(csvString) {
          // transform the CSV string into a 2-dimensional array
@@ -35,7 +35,7 @@
          };
          var chart = new google.visualization.ScatterChart(document.getElementById('chart'));
          chart.draw(view, options);
-      });
+            });
 }
 
 
