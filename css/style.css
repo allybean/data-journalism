@@ -1,12 +1,15 @@
 body{
 	margin: 0;
 	padding: 0;
+background-color: #f0f0f0;
 }
 
 #chart_div{
 	font-family: Helvetica;
+	margin-top: 50px;
 }
 
 #main {
 	margin: 0 auto;
+	width: 980px;
 }
