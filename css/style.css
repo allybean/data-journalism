@@ -14,9 +14,9 @@ body{
 }
 
 p {
-font-size: 17px;
+font-size: 20px;
 line-height: 1.6em;
-margin-top: 6px;
+margin-top: 12px;
 }
 
 #chart_div{
