@@ -2,13 +2,6 @@
 <html>
  <head>
   <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
-<script>
-$(document).ready(function(){
-  $("img").click(function(){
-    $("p").show();
-  });
-});
-</script>
 
   <style type="text/css">
 
@@ -58,7 +51,6 @@ $(document).ready(function(){
 <TD ALIGN = "center"> <img data-dose="2600" src="nyquil.jpg">
  </TD>
  <TD ALIGN = "center"> <img data-dose="2600" src="ultracet.jpg">
->
  </TD>
 </TR>
 <TR>
@@ -93,7 +85,13 @@ $(document).ready(function(){
 
   // this is how you comment in javascript.
     console.log("this is where javascript will go!");
-
+<script>
+$(document).ready(function(){
+  $("img").click(function(){
+    $("p").show();
+  });
+});
+</script>
 
  </head>
  <body>
