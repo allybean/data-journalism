@@ -1,7 +1,100 @@
-<!DOCTYPE html>
+
+<style type="text/css">
+
+  body {
+      width:760px;
+      margin:40px auto;
+      font-family: georgia, sans;
+  }
+
+  h1 {
+      border-bottom:1px solid #dedede;
+      margin-bottom:20px;
+      padding-bottom:20px;
+  }
+
+ .selected {
+    opacity: .4;
+ }
+
+ #pics {
+  margin:80px;
+ }
+
+h3 {
+  margin-top:10%;
+  margin-left:85%;  
+}
+
+</style>
+
+
+<h1>How Much Acetaminophen Are You Taking?</h1>
+
+<h3 id="total">Total dose: <span id="total-amount-value"></span></h3>
+
+<div id="pics">
+<img data-dose="2000" src="alkaseltzer.jpg"/>
+<img data-dose="4000" src="anacin.jpg"/>
+<img data-dose="800" src="childrenstylenol.jpg"/>
+<img data-dose="2900" src="coricidin.jpg"/>
+<img data-dose="1300" src="dayquil.jpg"/>
+<img data-dose="800" src="dimetapp.jpg"/>
+<img data-dose="2000" src="excedrin.jpg"/>
+<img data-dose="3900" src="hydrocodone.jpg"/>
+<img data-dose="2600" src="nyquil.jpg"/>
+<img data-dose="3900" src="oxycodone.jpg"/>
+<img data-dose="800" src="panadol.jpg"/>
+<img data-dose="3900" src="percoset.jpg"/>
+<img data-dose="3840" src="robitussin.jpg"/>
+<img data-dose="3250" src="sudafed.jpg"/>
+<img data-dose="3900" src="theraflu.jpg"/>
+<img data-dose="3000" src="tylenolextrastrngth.jpg"/>
+<img data-dose="4000" src="tylenolwcodeine.jpg"/>
+<img data-dose="2600" src="ultracet.jpg"/>
+<img data-dose="3960" src="vicodin.jpg"/>
+<img data-dose="3900" src="zicam.jpg"/>
+  
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+<script type="text/javascript">
+
+var total = 0;
+
+$( "img" ).click(function() {
+
+
+  var drug=+$(this).attr("data-dose");
+
+  //comments can be helpful
+  var drugDose = +$(this).attr("data-dose");
+
+ 
+if ($(this).hasClass("selected") ) {
+  total -= drug
+
+} else {
+   //update my total.
+  total += drug;
+
+}
+  
+  // print the total somewhere
+  $("#total-amount-value").html(total);
+
+  });
+
+$("img").click(function(){
+  $(this).toggleClass("selected")
+})
+
+
+  </script>
+
+
+<!-- <!DOCTYPE html>
 <html>
  <head>
-  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+  
   <style type="text/css">
 
   body {
@@ -28,6 +121,7 @@
   <h1>How Much Acetaminophen Are You Taking?</h1>
   <script>
     function displayResult1() {
+
     document.getElementById("myHeader").innerHTML = "2000 mg";
     }
     </script>
@@ -161,11 +255,12 @@
 <TABLE BORDER="3" CELLSPACING="1" CELLPADDING="1">
 
 <TR>
-<TD ALIGN = "center"> <img data-dose-a="2000" src="alkaseltzer.jpg"></TD>
-<TD ALIGN = "center"> <img data-dose-b="4000" src="anacin.jpg"></TD>
-<TD ALIGN = "center"> <img data-dose-c="800" src="childrenstylenol.jpg"></TD>
-<TD ALIGN = "center"> <img data-dose-d="3900" src="coricidin.jpg"></TD>
-<TD ALIGN = "center"> <img data-dose-e="1300" src="dayquil.jpg"></TD>
+
+<TD ALIGN = "center"> <img data-dose="2000" src="alkaseltzer.jpg"></TD>
+<TD ALIGN = "center"> <img data-dose="4000" src="anacin.jpg"></TD>
+<TD ALIGN = "center"> <img data-dose="800" src="childrenstylenol.jpg"></TD>
+<TD ALIGN = "center"> <img data-dose="3900" src="coricidin.jpg"></TD>
+<TD ALIGN = "center"> <img data-dose="1300" src="dayquil.jpg"></TD>
 </TR>
 <TR>
 <TD ALIGN = "center"> <img data-dose="800" src="dimetapp.jpg"></TD> 
@@ -189,6 +284,26 @@
 <TD ALIGN = "center"> <img data-dose="3900" src="zicam.jpg"></TD>
 </TR>
 </TABLE>
+<p id="total">6800</p>
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+<script type="text/javascript">
+var total=0;
+
+
+$( "button" ).click(function() {
+  console.log(this)
+});
+
+
+$( "img" ).click(function() {
+  var drug=+$(this).attr("data-dose");
+  total+=drug;
+$("#total").html(total)
+
+  });
+
+
   
+  </script>
  </body>
-</html>
+</html> -->
