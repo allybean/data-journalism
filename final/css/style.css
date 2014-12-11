@@ -33,7 +33,7 @@ h2 {
 }
 
 p {
-  color: #333;
+  color: #F0F0F0;
   font-family: 'Open Sans' !important;
 }
 
@@ -49,6 +49,10 @@ video {
   position: absolute;
   width: 100%;
   transition: -webkit-filter 0.5s ease-in-out;
+}
+
+audio {
+  margin-left: 5%;
 }
 
 .overlay {
@@ -193,14 +197,17 @@ big {
   /*font-family: 'Mate SC' !important;*/
   font-size: 4em !important;
   line-height: 1em !important;
+  color: #F0F0F0;
+  padding-left: 3%;
 }
 
 .data h2 {
-  color: #0F3880;
+  color: #480000;
   font-family: 'Open Sans' !important;
   font-weight: 800 !important;
   text-transform: none !important;
   font-size: 1.2em !important;
+  padding-left: 3%;
 }
 
 .quote {
@@ -209,6 +216,7 @@ big {
   font-weight: 300 !important;
   text-transform: none !important;
   font-size: 1.5em !important;
+  padding-left: 3%;
 }
 
 

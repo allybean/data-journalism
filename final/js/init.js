@@ -23,6 +23,7 @@ window.onload = function() {
 		$('nav').fadeOut
 		// can play audio
 		// #a+id
+		$('#theaudio').play();
 	});
 
 	$('#about').click(function(){
